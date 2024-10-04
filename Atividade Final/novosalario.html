@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Novo Salario</title>
+</head>
+
+<body class="bg-secondary">
+    <script>
+
+        let salarioAtual = parseFloat(prompt('Digite o salário atual do funcionário: '));
+        let novoSalario;
+        
+        if (salarioAtual <= 0) {
+            document.write(`Digite um valor de salário válido!`);
+        }
+        else if (salarioAtual <= 1200.00) {
+            novoSalario = salarioAtual + (15 / 100 * salarioAtual);
+            document.write(`O salário antes do aumento: R$${salarioAtual.toFixed(2)}.`);
+            document.write("<br>");
+            document.write(`O salário depois do aumento de 15%: R$${novoSalario.toFixed(2)}.`);
+        }
+        else if (salarioAtual > 1200.00 && salarioAtual <= 2400.00) {
+            novoSalario = salarioAtual + (10 / 100 * salarioAtual);
+            document.write(`O salário antes do aumento: R$${salarioAtual.toFixed(2)}.`);
+            document.write("<br>");
+            document.write(`O salário depois do aumento de 10%: R$${novoSalario.toFixed(2)}.`);
+        }
+        else if (salarioAtual > 2400.00) {
+            novoSalario = salarioAtual + (5 / 100 * salarioAtual);
+            document.write(`O salário antes do aumento: R$${salarioAtual.toFixed(2)}.`);
+            document.write("<br>");
+            document.write(`O salário depois do aumento de 5%: R$${novoSalario.toFixed(2)}.`);
+        }
+        else {
+            salarioAtual = " ";
+            document.write("Digite um valor!");
+        }
+    </script>
+</body>
+
+</html>
+
+<!-- Equipe 36
+Alexia Grangeiro Furtado Gomes da Cruz - Matrícula 2323079
+Julio Cesar Nascimento da Silva - Matrícula 2326600
+Leonardo Nunes Juliao - Matrícula 2326267
+Luiz Gabriel de Sousa Madeira - Matrícula 2326239
+Sabrina dos Santos Alves - Matrícula 2326657 
+Tulio Gomes Cezar - Matrícula 2326233 -->
